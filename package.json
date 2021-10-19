@@ -1,0 +1,23 @@
+{
+  "name": "projecta2-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/premelar7/projecta2-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/premelar7/projecta2-backend/issues"
+  },
+  "homepage": "https://gitlab.com/premelar7/projecta2-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
