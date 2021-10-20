@@ -6,3 +6,4 @@ docker-compose*
 .git
 .vscode
 package-lock.json
+.env
