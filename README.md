@@ -17,5 +17,5 @@ This project has been created for my collection. Develop the API for usage in bu
     `npm install`<br/>
 To install package from `package.json`
 
-3. run <br/>`node index.js`<br/> to execute node server then can access the API.
+3. run <br/>`npm run dev`<br/> to execute node server then can access the API.
 
