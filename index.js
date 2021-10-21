@@ -1,13 +1,12 @@
+require("dotenv").config();
 const express = require("express");
-const logger = require("./middleware/log.middleware");
 const app = express();
 
 const api = require("./routes/main");
+const sql = require("./config/databse.config");
 
 const port = process.env.PORT || 3000;
 
-//MIDDILEWARE
-app.use(logger);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
