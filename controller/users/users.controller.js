@@ -2,13 +2,15 @@
 const db = require('../../config/database.config');
 const moment = require("moment");
 const sequelize = db.sequelize;
+
 const user_portal = db.user_portal;
 const user_profile = db.user_profile;
+
 const response = {
-    "success": false,
-    "code": null,
-    "http_status": 200,
-    "result": []
+    success: false,
+    code: null,
+    http_status: 200,
+    result: []
 };
 
 module.exports = {
@@ -25,11 +27,11 @@ module.exports = {
             response.code = "SUCCESS";
             response.result = user.map(obj => {
                 let rObj = {
-                    "user_id": obj.user_id,
-                    "email": obj.email,
-                    "firstname": obj.firstname,
-                    "lastname": obj.lastname,
-                    "datecreate": moment(obj.datecreate).format('YYYY-MM-DD h:mm:ss')
+                    user_id: obj.user_id,
+                    email: obj.email,
+                    firstname: obj.firstname,
+                    lastname: obj.lastname,
+                    datecreate: moment(obj.datecreate).format('YYYY-MM-DD h:mm:ss')
                 }
                 return rObj;
             });
