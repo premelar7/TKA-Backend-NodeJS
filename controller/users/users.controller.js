@@ -19,6 +19,7 @@ module.exports = {
     },
     users_update: async function (req, res) {
         res.status(200).json(req.body);
+        //Update release branch
     },
     users_search: async function (req, res) {
         let user = await user_portal.findAll();
