@@ -12,6 +12,8 @@ const sequelize = new Sequelize(process.env.SQL_DATABASE, process.env.SQL_USER, 
     }
 });
 
+//Update Login
+
 const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
