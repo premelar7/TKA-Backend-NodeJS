@@ -1,5 +1,5 @@
 
-const db = require('../../config/database.config');
+const db = require('../../config/database.sql.config');
 const moment = require("moment");
 const sequelize = db.sequelize;
 
