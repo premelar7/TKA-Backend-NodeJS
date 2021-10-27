@@ -4,7 +4,7 @@ const app = express();
 
 const api = require("./routes/main");
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -13,6 +13,7 @@ app.use(express.urlencoded({ extended: false }));
 app.get("/", (req, res) => {
     res.send("Express.js Framework development.");
 });
+//
 
 //API PATH
 app.use("/api", api);

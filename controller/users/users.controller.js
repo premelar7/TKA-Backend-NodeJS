@@ -1,5 +1,5 @@
 
-const db = require('../../config/database.config');
+const db = require('../../config/database.sql.config');
 const moment = require("moment");
 const sequelize = db.sequelize;
 
@@ -19,6 +19,7 @@ module.exports = {
     },
     users_update: async function (req, res) {
         res.status(200).json(req.body);
+        //Update release branch
     },
     users_search: async function (req, res) {
         let user = await user_portal.findAll();
