@@ -1,15 +1,11 @@
 const Sequelize = require('sequelize');
+const mysql = require('./../config/database.config').MySQL;
 
-const sequelize = new Sequelize(process.env.SQL_DATABASE, process.env.SQL_USER, process.env.SQL_PASSWORD, {
-    host: process.env.SQL_HOST,
-    dialect: 'mysql',
-    logging: false,
-    pool: {
-        max: 5,
-        min: 0,
-        acquire: 30000,
-        idle: 10000
-    }
+const sequelize = new Sequelize(mysql.database, mysql.user, mysql.password, {
+    host: mysql.host,
+    dialect: mysql.dialect,
+    logging: mysql.logging,
+    pool: mysql.pool
 });
 
 //Update Login
