@@ -14,7 +14,7 @@ const apiLimiter = rateLimit({
         success: false,
         code: null,
         http_status: 429,
-        result: ["Too many accounts created from this IP, please try again after an hour"]
+        result: ["Too many requests, please try again later."]
     }
 });
 
