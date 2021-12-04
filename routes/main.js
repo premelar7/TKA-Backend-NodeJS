@@ -12,7 +12,7 @@ const apiLimiter = rateLimit({
     max: 100,
     message: {
         success: false,
-        code: null,
+        code: 39901,
         http_status: 429,
         result: ["Too many requests, please try again later."]
     }
