@@ -15,5 +15,10 @@ module.exports = {
     },
     MongoDB: {
         uri: process.env.MONGO_DATABASE
+    },
+    RedisDB: {
+        host: process.env.REDIS_HOST,
+        port: process.env.REDIS_PORT,
+        password: process.env.REDIS_PASSWORD
     }
 }
