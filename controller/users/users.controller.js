@@ -1,6 +1,7 @@
 
-const db = require('../../config/database.sql.config');
+const db = require('./../../modules/connection.mysql');
 const moment = require("moment");
+const els_mail = require("./../../modules/elastic.mail");
 const sequelize = db.sequelize;
 
 const user_portal = db.user_portal;
@@ -15,7 +16,13 @@ const response = {
 
 module.exports = {
     users_create: async function (req, res) {
-        res.status(200).json(req.body);
+        let mail = await els_mail.send_email({
+            to_mail: "premelar7@gmail.com",
+            subject: "Verify Your email",
+            message: "12355"
+        });
+        response.result = JSON.parse(mail);
+        res.status(200).json(response);
     },
     users_update: async function (req, res) {
         res.status(200).json(req.body);
