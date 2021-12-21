@@ -48,7 +48,7 @@ module.exports = {
             response.code = "EMPTY";
         }
 
-        res.status(200).json(response);
+        res.status(response.http_status).json(response);
 
     }
 };

@@ -1,5 +1,6 @@
 const els = require('./../config/mail.config').elastic;
 const request = require('request');
+const form = require('./../modules/template/register');
 
 module.exports = {
     send_email: async function (param) {
@@ -11,7 +12,7 @@ module.exports = {
                     subject: param.subject,
                     from: els.from_mail,
                     msgTo: param.to_mail,
-                    bodyHtml: param.message,
+                    bodyHtml: form,
                     encodingType: els.encode
                 },
                 timeout: 5000
